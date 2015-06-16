@@ -66,3 +66,4 @@ venv-pub/
 #project stuff
 .csv
 .html
+bin/csv_catalogs
