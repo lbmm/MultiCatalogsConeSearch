@@ -1,4 +1,5 @@
 import os
+import argparse
 
 import pymongo
 import bottle
@@ -6,13 +7,12 @@ import bottle
 import catalogsDAO
 import metaData
 
-ROOT = ''
-PATH_JS = '%s/js' % ROOT
-PATH_STATIC = '%s/static' % ROOT
+
 
 #this route the static files
 @bottle.route('/static/:filename#.*#')
 def server_static(filename):
+    PATH_STATIC = '%s/static' % ROOT
 
     try:
         if not os.path.exists(PATH_STATIC+"/"+filename):
@@ -25,6 +25,7 @@ def server_static(filename):
 #this route the js files
 @bottle.route('/js/:filename#.*#')
 def server_js(filename):
+    PATH_JS = '%s/js' % ROOT
     try:
         if not os.path.exists(PATH_JS+"/"+filename):
             return bottle.template("not_found")
@@ -42,6 +43,12 @@ def catalogs_index():
     return bottle.template('search_catalogs', dict(catalogs=l))
 
 
+def isFloat(str):
+    try:
+        float(str)
+        return True
+    except ValueError as e:
+        return False
 
 
 @bottle.post("/cone_search")
@@ -52,13 +59,16 @@ def process_cone_search():
     dec = bottle.request.forms.get('dec')
     radius = bottle.request.forms.get('radius')
 
-    data = catalogs.search_catalogs(catalogs_to_search, ra, dec, radius)
-    return bottle.template('show_entries', data=data, hyper_links=info_catalogs.get_all_links(),
-                           extra_columns=info_catalogs.get_all_columns(),
-                           ra=ra, Dec=dec, radius=radius)
+    if isFloat(ra) and isFloat(dec):
 
-
-
+        data = catalogs.search_catalogs(catalogs_to_search, ra, dec, radius)
+        return bottle.template('show_entries', data=data, hyper_links=info_catalogs.get_all_links(),
+                               extra_columns=info_catalogs.get_all_columns(),
+                               ra=ra, Dec=dec, radius=radius)
+    else:
+        l = catalogs.get_catalogs()
+        return bottle.template('search_catalogs', dict(catalogs=l), error="please provide right input format",
+                               ra=ra, dec=dec)
 
 
 @bottle.get('/internal_error')
@@ -75,6 +85,19 @@ catalogs = catalogsDAO.CatalogsDAO(database)
 info_catalogs = metaData.MetaData()
 
 
-bottle.debug(True)
-bottle.run(host='localhost', port=8082)         # Start the webserver running and wait for requests
+def run_server():
+    # run the web server
+    bottle.debug(True)
+    bottle.run(host='localhost', port=8082)  # Start the webserver running and wait for requests
 
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='python catalogs.py will start the catalogs cone search service')
+    parser.add_argument('-d', '--dir', help='where to find the statics files', required=True)
+    args = vars(parser.parse_args())
+
+    ROOT = args['dir']
+    print ROOT
+
+    bottle.debug(True)
+    run_server()
