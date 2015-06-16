@@ -1,25 +1,32 @@
 % include header.tpl js_array=["/js/jquery.multiselect.js","/js/jquery.multiselect.filter.js","/js/search_catalogs.js", "http://d3js.org/d3.v3.min.js"], css_array=["/static/jquery.multiselect.css", "/static/jquery.multiselect.filter.css", "/static/tree.css"]
 
+%setdefault('error','')
+%setdefault('ra','')
+%setdefault('dec','')
+
 
 
 
 <div id="Content">
 <h1>Cone search for all catalogs</h1>
 
+
+
     <form method="post" action="/cone_search">
       <table >
+      <tr> <td class="error" colspan="2"> {{error}} </td></tr>
         <tr>
           <td >
             Catalog
           </td>
           <td>
-            <select name="catalogs" id="catalogs" multiple="multiple" style="width:370px">
+            <select name="catalogs" id="catalogs" multiple="multiple" style="width:370px" required>
                %for c in catalogs:
                <optgroup label="Fermi">
                  <option value="{{c}}">{{c}} </option>
                </optgroup>
                % end
-            </select>
+            </select> *
           </td>
         </tr>
         <tr>
@@ -27,7 +34,7 @@
             Ra
           </td>
           <td>
-            <input type="text" name="ra"  value="">
+            <input type="text" name="ra"  value="{{ra}}" required> *
           </td>
 
         </tr>
@@ -37,7 +44,7 @@
            dec
           </td>
           <td>
-            <input type="text" name="dec" value="">
+            <input type="text" name="dec" value="{{dec}}" required> *
           </td>
 
         </tr>
