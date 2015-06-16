@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd ../multicatalogsSearch
+python catalogs.py --dir $(pwd)
