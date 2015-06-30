@@ -97,7 +97,6 @@ if __name__ == '__main__':
     args = vars(parser.parse_args())
 
     ROOT = args['dir']
-    print ROOT
 
     bottle.debug(True)
     run_server()

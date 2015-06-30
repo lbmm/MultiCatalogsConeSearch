@@ -64,7 +64,7 @@ var detailsColumns = []; //mDataProp
 detailsColumns.push(columnsInfo);
 var details_row{{d}}=[fullDetail_row{{d}}];
 var row_{{d}} = { Catalog: '{{catalog_name}}', Name: '{{data[d]['%s_name' %catalog_name]}}', Other_Name: '{{data[d]['other_name']}}',
-                  Ra: '{{data[d]['RA']}}', Dec:'{{data[d]['Dec']}}', LII: '{{data[d]['LII']}}', BII: '{{data[d]['BII']}}',details: details_row{{d}}};
+                  Ra: '{{data[d].get('RA', 0)}}', Dec:'{{data[d].get('Dec', 0)}}', LII: '{{data[d].get('LII', 0)}}', BII: '{{data[d].get('BII', 0)}}',details: details_row{{d}}};
 newRowData.push(row_{{d}})
 %end
 
@@ -157,7 +157,8 @@ var iTableCounter = 1;
                     "bSort" : true, // disables sorting
                     "bPaginate": false,
                     "autoWidth": false,
-                    "paging": false
+                    "paging": false,
+                    "sErrMode" : "throw"
                     });
 
                 iTableCounter = iTableCounter + 1;
