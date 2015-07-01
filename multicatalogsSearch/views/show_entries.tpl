@@ -86,7 +86,7 @@ var iTableCounter = 1;
         //Insert a 'details' column to the table
         var nCloneTh = document.createElement('th');
         var nCloneTd = document.createElement('td');
-        nCloneTd.innerHTML = '<img src="http://i.imgur.com/SD7Dz.png">';
+        nCloneTd.innerHTML = '<img src="/static/images/minus.png">';
         nCloneTd.className = "center";
 
         $('#catalogs thead tr').each(function () {
@@ -109,7 +109,7 @@ var iTableCounter = 1;
                 {
                    "mDataProp": null,
                    "sClass": "control center",
-                   "sDefaultContent": '<img src="http://i.imgur.com/SD7Dz.png">'
+                   "sDefaultContent": '<img src="/static/images/plus.png">'
                 },
                 { "mDataProp": "Catalog" },
                 { "mDataProp": "Name" },
@@ -134,7 +134,7 @@ var iTableCounter = 1;
 
             if (oTable.fnIsOpen(nTr)) {
                 /* This row is already open - close it */
-                this.src = "http://i.imgur.com/SD7Dz.png";
+                this.src = "/static/images/plus.png";
                 oTable.fnClose(nTr);
             }
             else {
@@ -142,10 +142,10 @@ var iTableCounter = 1;
                 var rowIndex = oTable.fnGetPosition( $(nTds).closest('tr')[0]);
                 var detailsRowData = newRowData[rowIndex].details;
                 var dColumns = detailsColumns[rowIndex];
-                this.src = "http://i.imgur.com/d4ICC.png";
+                this.src = "/static/images/minus.png";
 
                 oTable.fnOpen(nTr, fnFormatDetails(iTableCounter, detailsTableHtml), 'details');
-                oInnerTable = $("#catalogs_" + iTableCounter).dataTable({
+                 oInnerTable = $("#catalogs_" + iTableCounter).dataTable({
                     "sScrollX": '100%',
                     "bJQueryUI": true,
                     "bFilter": false,
