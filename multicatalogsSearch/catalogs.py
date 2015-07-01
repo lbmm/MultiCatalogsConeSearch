@@ -40,6 +40,7 @@ def catalogs_index():
 
     # even if there is no logged in user, we can show the blog
     l = catalogs.get_catalogs()
+    print l
     return bottle.template('search_catalogs', dict(catalogs=l))
 
 

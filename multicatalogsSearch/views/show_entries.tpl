@@ -60,6 +60,7 @@ var detailsColumns = []; //mDataProp
            columns ={'mDataProp':'{{column_name}}', 'sTitle':'{{!e_c}}'}
            columnsInfo.push(columns)
            fullDetail_row{{d}}['{{column_name}}']='{{!data[d][e_c]}}'
+
     % end
 detailsColumns.push(columnsInfo);
 var details_row{{d}}=[fullDetail_row{{d}}];
