@@ -1,7 +1,8 @@
-include README.txt
+include README.md
 include changeLog.txt
+recursive-include multicatalogsSearch *.cfg
 recursive-include multicatalogsSearch/static *
 recursive-include multicatalogsSearch/js *
 recursive-include multicatalogsSearch/views  *
-recursive-include bin/*
+recursive-include bin *
 

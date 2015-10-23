@@ -23,7 +23,7 @@ config = {
                            ]
                     },
     'package_data': {
-        'multicatalogsSearch': ['static/*', 'js/*.js','js/library/*.js', 'views/*.tpl'],
+        'multicatalogsSearch': ['static/*', 'js/*.js','js/library/*.js', 'views/*.tpl', '*.cfg'],
        },
         'include_package_data': True
 }
