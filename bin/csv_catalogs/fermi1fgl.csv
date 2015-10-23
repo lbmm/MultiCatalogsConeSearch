@@ -1,4 +1,4 @@
-_id , fermi1fgl_name , other_name , RA, Dec  , LII , BII , Gamma Assoc , Flux1Gev-100 Gev , Spectral index , Spectral index Error , Flux100-300 Mev , Flux300Mev-1Gev , Flux1GeV-3Gev , Flux3-10 Gev , Flux10-100 Gev , Optical classification , TeV CAT , Variability index
+_id , fermi1fgl_name , other_name , RA, Dec  , LII , BII ,GammaAssoc,Flux1Gev-100Gev,Spectral_index,Spectral_index_Error,Flux100-300_Mev,Flux300Mev-1Gev,Flux1GeV-3Gev,Flux3-10Gev,Flux10-100Gev,Optical_classification,TeV_CAT,Variability_index 
 1 , 1FGL J0003.1+6227 , , 0.79792 , 62.45878 , 117.38 , 0.1 , , (21.4+/-5.1) e-10 , 2.527 , 0.101 , < 3.00e-8 , (16.6+/-2.6) e-9 , (19.8+/-4.9) e-10 , < 4.33e-10 , < 1.36e-10 , Unassociated , N , 15.191
 2 , 1FGL J0004.3+2207 , , 1.08042 , 22.12339 , 108.75 , -39.45 , , (6.1+/-2.1) e-10 , 2.349 , 0.21 , < 1.77e-8 , < 3.60e-9 , (4.1+/-1.8) e-10 , (19.4+/-9.1) e-11 , < 8.58e-11 , Unassociated , N , 5.456
 3 , 1FGL J0004.7-4737 , PKS 0002-478 , 1.18625 , -47.62458 , 323.86 , -67.57 , , (8.4+/-2.7) e-10 , 2.564 , 0.172 , (24.1+/-7.7) e-9 , (30.6+/-9.7) e-10 , (7.9+/-2.4) e-10 , < 1.97e-10 , < 1.53e-10 , FSRQ , N , 9.321

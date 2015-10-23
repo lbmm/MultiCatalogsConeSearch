@@ -1,4 +1,4 @@
-_id , lbas_name , other_name , RA , Dec, LII , BII , Flux100 Mev , Spectral index , Sigma , Associated name , Association Probability , FoM , FluxPeak , Flux Summed , Redshift , Classification , Variability
+_id ,fermilbas_name,other_name,RA,Dec,LII,BII,Flux100 Mev,Spectral_index,Sigma,Associated_name,Association_Probability,FoM,FluxPeak,Flux_Summed,Redshift,Classification,Variability
 1 , 0FGLJ0017.4-0503 , - , 4.35792 , -5.054 , 101.27 , -66.49 , (13.9+/-2.4) e-8 , 2.71 , 14.7 , CGRaBS J0017-0512 , 0.92 , 16.2 , (34.8+/-6.5) e-8 , (12.1+/-1.4) e-8 , 0.227 , FSRQ , T 
 2 , 0FGLJ0033.6-1921 , KUV 00311-1938 , 8.40083 , -19.36 , 94.21 , -81.22 , (16+/-4) e-9 , 1.7 , 10.7 , BZB J0033-1921 , 0.99 , 0 , (2.9+/-1.3) e-8 , (4+/-1) e-9 , 0.61 , BL Lac , - 
 3 , 0FGLJ0050.5-0928 , PKS 0048-097 , 12.63667 , -9.47 , 122.2 , -72.34 , (10.2+/-1.4) e-8 , 2.15 , 20.5 , CRATES J0050-0929 , 0.99 , 61.01 , (19+/-4) e-8 , (8.8+/-1.3) e-8 , 0 , BL Lac , T 
