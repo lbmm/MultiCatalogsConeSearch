@@ -1,0 +1,4 @@
+v0.2 updated catalogs
+     added makefile
+
+v0.1 first release
