@@ -1,0 +1,7 @@
+include README.txt
+include changeLog.txt
+recursive-include multicatalogsSearch/static *
+recursive-include multicatalogsSearch/js *
+recursive-include multicatalogsSearch/views  *
+recursive-include bin/*
+
