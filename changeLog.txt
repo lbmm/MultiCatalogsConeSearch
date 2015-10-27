@@ -1,3 +1,5 @@
+v0.3 added new catalogs from Valerio e Francesco
+
 v0.2 updated catalogs
      added makefile
 
