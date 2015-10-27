@@ -9,7 +9,7 @@ config = {
     'description': 'ASDC Multicatalogs search',
     'author': 'fmoscato',
     'url': '',
-    'version':'0.2', 
+    'version':'0.3', 
     'download_url': 'Where to download it.',
     'author_email': 'fmoscato@asdc.asi.it',
     'install_requires': ['nose', 'pymongo', 'bottle'],
