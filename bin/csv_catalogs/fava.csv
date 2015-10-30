@@ -1,4 +1,4 @@
-_id , fava_name,RA,Dec,LII, BII , # Flares , # HE Flares , # Neg. Flares , LAT Assoc. , Assoc. , Atel # , src,other_name
+_id , fava_name,RA,Dec,LII, BII ,Flares , HE_Flares , Neg_Flares , LAT_Assoc , Assoc , Atel  , src,other_name
 1 , J0019-05 , 4.77 , -5.35 , 102.01 , -66.9 , 1 , 0 , 0 , 2FGL_J0017.6-0510 , PMN_J0017-0512 , 0 , 183,
 2 , J0029-55 , 7.28 , -55.05 , 309.69 , -61.79 , 1 , 0 , 0 , 2FGL_J0032.7-5521 , none , 0 , 201,
 3 , J0031-02 , 7.85 , -2.3 , 111.14 , -64.72 , 1 , 1 , 0 , none , none , 0 , 170,

@@ -34,7 +34,7 @@
         var selected =  data.getFormattedValue(row, 0)
         var all_links = {{!hyper_links}};
         var location = all_links[selected];
-        window.location =  location+'index.php?ra='+'{{ra}}'+'&dec='+{{Dec}}+'&radius='+{{radius}};
+        window.location =  location+'?ra='+'{{ra}}'+'&dec='+{{Dec}}+'&radius='+{{radius}};
          });
       }
 
@@ -104,7 +104,7 @@ var iTableCounter = 1;
         var oTable = $('#catalogs').dataTable({
             "bJQueryUI": true,
             "aaData": newRowData,
-            "iDisplayLength": 5,
+            "iDisplayLength": 100,
             "bAutoWidth":false, 
             "aoColumns": [
                 {
@@ -141,8 +141,8 @@ var iTableCounter = 1;
             else {
                 /* Open this row */
                 var rowIndex = oTable.fnGetPosition( $(nTds).closest('tr')[0]);
-                var detailsRowData = newRowData[rowIndex].details;
-                var dColumns = detailsColumns[rowIndex];
+                var detailsRowData = newRowData[rowIndex].details || '---';
+                var dColumns = detailsColumns[rowIndex] || '---';
                 this.src = "/static/images/minus.png";
 
                 oTable.fnOpen(nTr, fnFormatDetails(iTableCounter, detailsTableHtml), 'details');
@@ -159,7 +159,7 @@ var iTableCounter = 1;
                     "bPaginate": false,
                     "autoWidth": false,
                     "paging": false,
-                    "sErrMode" : "throw"
+                    "sErrMode" : "mute"
                     });
 
                 iTableCounter = iTableCounter + 1;

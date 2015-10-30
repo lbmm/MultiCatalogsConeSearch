@@ -86,7 +86,7 @@ info_catalogs = metaData.MetaData()
 
 
 def run_server():
-    
+
     import socket
     bottle.run(host=socket.gethostname(), port=8082)  # Start the webserver running and wait for requests
 

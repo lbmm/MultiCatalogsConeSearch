@@ -1,4 +1,4 @@
-_id ,RA , Dec , Counterpart RA , Counterpart DEC , LII , BII , bat70_name , Type , other_name , SNR , Flux_15-195KeV , Flux low , Flux high , Redshift , lum , Error radius(') , Chi^2 , Gamma , Gamma low , Gamma high
+_id , RA  , Dec  , CounterpartRA , CounterpartDEC , LII , BII , bat70_name , Type , other_name , SNR , Flux15-195KeV, Flux_low , Flux_high , Redshift , lum , Error radius, Chi^2 , Gamma , Gamma_low , Gamma_high
 1 , 0.66417 , 3.33247 , 0.6103 , 3.3519 , "99.92" , "-57.35" , "SWIFT J0002.5+03" , "Sy1.5" , " " , 5.1 , 11.69 , 7.36 , 16.64 , 0.026 , 43.24 , 5.5 , 0.5 , 1.82 , 1.31 , 2.39
 2 , 0.86167 , 27.67589 , 0.8643 , 27.6548 , "110.1" , "-34" , "SWIFT J0003.3+27" , "Galaxy" , " " , 5 , 13 , 8.76 , 17.7 , -1 , -9.9 , 5.57 , 1 , 1.66 , 1.25 , 2.12
 3 , 1.01083 , 70.32742 , 1.008167 , 70.321747 , "118.93" , "7.82" , "SWIFT J0005.0+70" , "Sy2" , "IGR J00040+702" , 7.2 , 12.67 , 9.38 , 16.33 , 0.096 , 44.469 , 3.9 , 0.7 , 2.19 , 1.83 , 2.61

@@ -1,4 +1,4 @@
-_id , ercsc_857_name , other_name , RA , Dec , LII , BII , flux density +/- err (mJy) , Detected flux +/- err (mJy) , PSF flux +/- err (mJy) , Gaussian fit flux +/- err (mJy) , PositionError (arcmin) , CMB subtracted , Extended , N. of observations , Reliability +/- err
+_id , ercsc857_name , other_name , RA , Dec , LII , BII , flux density +/- err (mJy) , Detected flux +/- err (mJy) , PSF flux +/- err (mJy) , Gaussian fit flux +/- err (mJy) , PositionError (arcmin) , CMB subtracted , Extended , N. of observations , Reliability +/- err
 1 , "PLCKERC857 G104.21-47.89"    ,, 0.09375 , 13.11306 , 104.2114 , -47.89402 , "3427.1+/-480" , "1.22e+4+/-272.9" , "2701.4+/-351" , "4.3e+4+/-1.37e+4" , 0.462 , 0 , 1 , 1 , "0.878+/-0.043"
 2 , "PLCKERC857 G304.22-31.96"    ,, 0.1 , -85.03472 , 304.22293 , -31.96473 , "9421.9+/-886" , "1.56e+4+/-153.2" , "6735.5+/-630.84" , "2.3e+4+/-1357.37" , 0.422 , 0 , 1 , 3 , "0.887+/-0.043"
 3 , "PLCKERC857 G112.57-21.29"    ,, 0.12167 , 40.55333 , 112.57409 , -21.29137 , "1.5e+4+/-2074" , "2.19e+4+/-138.5" , "1.0e+4+/-954.24" , "3.6e+4+/-3554.11" , 0.422 , 0 , 1 , 1 , "0.985+/-0.045"
